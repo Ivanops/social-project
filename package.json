@@ -6,6 +6,7 @@
   "license": "ISC",
   "dependencies": {},
   "devDependencies": {
+    "browser-sync": "^2.18.8",
     "gulp": "^3.9.1",
     "gulp-angular-embed-templates": "^2.3.0",
     "gulp-clean": "^0.3.2",

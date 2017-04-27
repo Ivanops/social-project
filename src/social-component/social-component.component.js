@@ -1,10 +1,11 @@
 
- (function(){
+(function(){
   'use strict';
 
   var component = {
-    templateUrl: 'social-component.html'
-    //controller: 'containerBoxController',
+    templateUrl: 'social-component.html',
+    controller: 'socialComponentController',
+    controllerAs: 'vm'
     // bindings: {
     //   resource      : '<',
     //   resourceName  : '<',
@@ -14,6 +15,6 @@
   }
 
   angular.module('set.social.components')
-    .component('setSocialComponent', component);
+    .component('setBox', component);
 
- })();
+})();

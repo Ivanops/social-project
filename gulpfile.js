@@ -1,25 +1,30 @@
 (function() {
 
   'use strict';
-  var gulp      = require('gulp');
-  var concat    = require('gulp-concat');
-  var uglify    = require('gulp-uglify');
-  var stylus    = require('gulp-stylus');
-  var cleanCSS  = require('gulp-clean-css');
-  var cssBase64 = require('gulp-css-base64');
-  var embed     = require('gulp-angular-embed-templates');
-  var order     = require("gulp-order");
-  var runSeq    = require('run-sequence').use(gulp);
-  var clean     = require('gulp-clean');
-  var server    = require('gulp-server-livereload');
-  var wiredep   = require('wiredep').stream;
+  var gulp        = require('gulp');
+  var concat      = require('gulp-concat');
+  var uglify      = require('gulp-uglify');
+  var stylus      = require('gulp-stylus');
+  var cleanCSS    = require('gulp-clean-css');
+  var cssBase64   = require('gulp-css-base64');
+  var embed       = require('gulp-angular-embed-templates');
+  var order       = require("gulp-order");
+  var runSeq      = require('run-sequence').use(gulp);
+  var clean       = require('gulp-clean');
+  var server      = require('gulp-server-livereload');
+  var wiredep     = require('wiredep').stream;
+  var browserSync = require('browser-sync').create();
 
   gulp.task('build', function() {
     runSeq('convert-css', 'vendor-js', 'minify-js', 'minify-css', 'clean-files', 'copy-files');
   });
 
+  gulp.task('deploy', function() {
+    runSeq('development', 'serve');
+  });
+
   gulp.task('development', function() {
-    runSeq('convert-css', 'minify-js', 'minify-css', 'clean-files', 'copy-files', 'bower', 'webserver');
+    runSeq('convert-css', 'minify-js', 'minify-css', 'clean-files', 'copy-files', 'bower');
   });
 
   /**
@@ -42,7 +47,12 @@
   *   $ gulp minify-js  --gulpfile gulpfile.js
   */
   gulp.task('minify-js', function () {
-    gulp.src(['src/**/*.js'])
+    return gulp.src([
+      'src/social-component.module.js',
+      'src/**/*.controller.js',
+      'src/**/*.component.js',
+      'src/**/*.js',
+      'src/**/*.min.js'])
     .pipe(embed())
     .pipe(concat('set.social.components.min.js'))
     .pipe(gulp.dest('dist/'));
@@ -122,7 +132,7 @@
          './dist/set.social.components.min.js',
         //'./dist/set.social.components.min.css'
         /* './dist/set.social.vendor.min.js'*/])
-      .pipe(gulp.dest('client'));
+      .pipe(gulp.dest('./client'));
     });
 
     gulp.task('bower', function () {
@@ -144,7 +154,16 @@
       }));
     });
 
+    gulp.task('serve', function(){
+      browserSync.init({
+        server: "./client"
+      });
+
+      gulp.watch('./client/**/*.*').on('change', function(){ browserSync.reload();});
+      gulp.watch('./src/**/*.*').on('change', function(){ runSeq('development');})
+    })
+
   gulp.task('default', ['build']);
-  gulp.task('dev', ['development']);
+  gulp.task('dev', ['deploy']);
 
 })();
