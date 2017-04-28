@@ -1,0 +1,28 @@
+<div class="nav-content">
+  <div class="col-md-10 corner-left">
+    <a ui-sref="set-chat-lucy" class="color-icon" >
+      <i class="fa fa-question-circle fa-lg" aria-hidden="true"></i>
+    </a>
+    <a ui-sref="set-share" class="color-icon" >
+      <i class="fa fa-share-alt fa-lg" aria-hidden="true" ></i>
+    </a>
+    <a ui-sref="set-attachment" class="color-icon" >
+      <i class="fa fa-paperclip fa-lg" aria-hidden="true"></i>
+    </a>
+    <a ui-sref="set-document" class="color-icon" >
+      <i class="fa fa-sticky-note fa-lg" aria-hidden="true"></i>
+    </a>
+    <a ui-sref="set-chat" class="color-icon">
+      <i class="fa fa-comment fa-lg" aria-hidden="true"></i>
+      <span ng-if="$ctrl.counter > 0" class="badge set-badge__counter" ng-click="$ctrl.click()">{{$ctrl.counter}}</span>
+    </a>
+    <a ui-sref="set-info" class="color-icon">
+      <i class="fa fa-info-circle fa-lg" aria-hidden="true"></i>
+    </a>
+  </div>
+  <div class="col-md-2 corner-right">
+    <a href="javascript:void(0);" ng-click="$ctrl.close()" class="color-icon color-icon-remove">
+      <i class="fa fa-times fa-lg" aria-hidden="true"></i>
+    </a>
+  </div>
+</div>

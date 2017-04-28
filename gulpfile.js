@@ -35,7 +35,7 @@
    */
 
   gulp.task('convert-css', function () {
-    gulp.src(['src/**/*.styl'], { base: './' })
+    gulp.src(['src/styles/*.styl'], { base: './' })
     .pipe(stylus())
     .pipe(gulp.dest('./'));
   });
@@ -94,7 +94,7 @@
   *   $ gulp minify-css  --gulpfile gulpfile.js
   */
   gulp.task('minify-css', function() {
-    return gulp.src(['src/**/*.css'])
+    return gulp.src(['src/styles/*.css'])
       .pipe(cssBase64(
       {
         maxWeightResource: 1000000000,
@@ -115,8 +115,9 @@
 
     gulp.task('clean-files', function () {
       return gulp.src([
-        './client/set.social.components.min.js'
-        /*'./angular-template-web/node_modules/social-component-ui/dist/set.social.components.min.css'*/])
+        './client/set.social.components.min.js',
+        './client/set.social.components.min.css',
+        'src/styles/*.css'])
       .pipe(clean({ read: false, force: true }));
     });
 
@@ -130,7 +131,7 @@
     gulp.task('copy-files', function () {
       gulp.src([
          './dist/set.social.components.min.js',
-        //'./dist/set.social.components.min.css'
+        './dist/set.social.components.min.css'
         /* './dist/set.social.vendor.min.js'*/])
       .pipe(gulp.dest('./client'));
     });
