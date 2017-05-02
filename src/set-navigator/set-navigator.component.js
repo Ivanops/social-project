@@ -1,12 +1,16 @@
 
 (function(){
   'use strict';
-  var app = angular.module('set.social.components');
-  app.component('setNavigator', {
+  var component = {
     bindings: {
-      resource : '<'
+      resource : '<',
+      onClose: '&'
     },
     templateUrl: 'set-navigator.html',
     controller: 'navigatorController'
-  });
+  }
+
+  angular.module('set.social.components')
+    .component('setNavigator', component);
+
 })();

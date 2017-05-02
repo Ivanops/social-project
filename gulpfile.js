@@ -164,7 +164,7 @@
       gulp.watch('./src/**/*.*').on('change', function(){ runSeq('development');})
     })
 
-  gulp.task('default', ['build']);
-  gulp.task('dev', ['deploy']);
+  gulp.task('last', ['build']);
+  gulp.task('default', ['deploy']);
 
 })();

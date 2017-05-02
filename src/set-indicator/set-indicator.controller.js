@@ -22,9 +22,7 @@
     };
 
     function click() {
-      // $rootScope.$emit('event-' + vm.source, vm.config);
-      vm.open()
-      console.log('click...Indicator')
+      vm.onOpen()
     };
 
     vm.notificationCounter = function () {

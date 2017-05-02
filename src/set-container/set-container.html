@@ -2,7 +2,7 @@
   <set-lucy class="col-md-2"></set-lucy>
   <div class="col-md-10 set-container-box__services">
     <div class="row margin-child">
-      <set-navigator resource="$ctrl.resource"></set-navigator>
+      <set-navigator resource="$ctrl.resource" on-close="$ctrl.changeIsOpenModal()"></set-navigator>
     </div>
     <div class="row margin-child">
       <set-chat resource="$ctrl.resource" resource-name="$ctrl.resourceName"></set-chat> 
@@ -11,5 +11,5 @@
   </div>
 </div>
 <div ng-animate=" 'animate' " ng-if="!$ctrl.isOpenModal">
-  <set-indicator config="$ctrl.configChat" resource="$ctrl.resource" open="$ctrl.changeIsOpenModal()"></set-indicator>
+  <set-indicator config="$ctrl.configChat" resource="$ctrl.resource" on-open="$ctrl.changeIsOpenModal()"></set-indicator>
 </div>

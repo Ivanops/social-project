@@ -4,23 +4,27 @@
   var app = angular.module('set.social.components');
   app.controller('navigatorController', NavigatorController);
 
-  NavigatorController.$inject = ['$rootScope','chatService', 'sessionService'];
-  function NavigatorCtrl($rootScope, chatService, sessionService) {
+  NavigatorController.$inject = [];
+  function NavigatorController() {
     var vm = this;
     var userSend = '';
     var counterLast = 0;
-    vm.$onInit = function() {
+    vm.$onInit = onInit;
+    vm.click = click;
+    vm.close = close;
 
+
+    function onInit() {
       vm.counter  = 0;
-      vm.notificationCounter();
-      vm.userId = sessionService.getUserStorage().id;
+      // vm.notificationCounter();
+      // vm.userId = sessionService.getUserStorage().id;
     };
 
-    vm.close = function () {
-      $rootScope.$emit('event-chat-close-' + vm.resource, {});
+    function close() {
+      vm.onClose();
     };
 
-    vm.click = function() {
+    function click() {
       vm.counter = vm.counter +1;
     };
 

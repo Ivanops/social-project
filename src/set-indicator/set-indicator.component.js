@@ -8,14 +8,17 @@
    * Component Indicator
    */
 
-  angular.module('set.social.components')
-    .component('setIndicator', {
+  var component = {
     templateUrl: 'set-indicator.html',
     controller: 'indicatorController',
     bindings: {
       config: "<",
       resource: "<",
-      open: '&'
+      onOpen: '&'
     }
-  });
+  }
+
+  angular.module('set.social.components')
+    .component('setIndicator', component);
+
 })();
