@@ -7,6 +7,9 @@ T: Try to stay DRY (Don’t Repeat Yourself) or T-DRY
 
 component naming (chat-message:set-message-component)
 
+## Gulp
+Some refactor to gulp suggestions
+
 ## Emit
 Watch diagram
 chat.controller 
