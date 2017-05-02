@@ -14,6 +14,7 @@ Some refactor to gulp suggestions
 Watch diagram
 chat.controller 
 chat.service
+https://toddmotto.com/all-about-angulars-emit-broadcast-on-publish-subscribing/
 https://dzone.com/articles/top-5-mistakes-angularjs-part-three
 
 ## http wrapper
@@ -26,7 +27,9 @@ chat.service: Lot of logic (use subscriber design pattern)
 
 ## suggestions
 Jenkins
+Protractor
 
+## Concerns
 chat.controller.js
 $sceProvider.enabled(false)
 
