@@ -1,11 +1,17 @@
 ## Structure
 LIFT:
+
 L: Locating our code is easy
+
 I: Identify code at a glance
+
 F: Flat structure as long as we can
+
 T: Try to stay DRY (Don’t Repeat Yourself) or T-DRY
 
 component naming (chat-message:set-message-component)
+
+https://github.com/johnpapa/angular-styleguide/blob/master/a1/README.md#services
 
 ## Gulp
 Some refactor to gulp suggestions
