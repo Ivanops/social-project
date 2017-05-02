@@ -26,10 +26,14 @@ chat.controller
 chat.service
 https://toddmotto.com/all-about-angulars-emit-broadcast-on-publish-subscribing/
 https://dzone.com/articles/top-5-mistakes-angularjs-part-three
+https://velesin.io/2016/05/18/communication-between-angular-1-5-components/
 
 ## http wrapper
 using $q bad practice http already returns a promise
 session service
+
+http://www.codelord.net/2015/09/24/%24q-dot-defer-youre-doing-it-wrong/
+https://toddmotto.com/promises-angular-q
 
 ## Observations Code
 chat.controller: repeat code 268
