@@ -1,3 +1,7 @@
+##
+Dado un número suficientemente elevado de ojos, todos los errores se vuelven obvios.»
+- Linus Torvalds
+
 ## Structure
 LIFT:
 
@@ -47,6 +51,8 @@ Strict Contextual Escaping (SCE) is a mode in which AngularJS constrains binding
 to only render trusted values. Its goal is to assist in writing code in a way that (a)
 is secure by default, and (b) makes auditing for security vulnerabilities such as XSS,
 clickjacking, etc. a lot easier.
+
+Can I disable SCE completely?
 
 Yes, you can. However, this is strongly discouraged.
 SCE gives you a lot of security benefits for little coding overhead.
