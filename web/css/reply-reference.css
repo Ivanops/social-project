@@ -1,0 +1,17 @@
+.set-reply-reference__text {
+  font-style: italic;
+}
+.set-reply-reference__container {
+  background-color: #fff5d9;
+  margin: 7px;
+  padding: 5px;
+  width: 80%;
+  border-radius: 7px;
+}
+.set-reply-reference__date {
+  font-style: italic;
+  color: #87b2ce;
+}
+.set-reply-reference__options {
+  text-align: right;
+}

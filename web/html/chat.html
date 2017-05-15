@@ -1,0 +1,222 @@
+<nav class="navbar" ng-controller="notificationController as notification">
+    <div class="container">
+        <div class="navbar-header">
+
+        </div>
+        <div  class="collapse navbar-collapse" id="bs-example-navbar-collapse-1" >
+            <div class="nav navbar-nav navbar-right" uib-dropdown>
+                <!--<li>-->
+                    <!--<i class="fa fa-bell-o" ng-click="notification.loadOpenNotifications()" uib-dropdown-toggle></i>-->
+                <!--</li>-->
+                <!--<div >
+                    <div class="indicator" uib-dropdown-toggle>
+                        <a ng-click="notification.click()" id="indicator">
+                            <div class="{{notification.class}}"></div>
+                            <span class="indicator-counter">{{notification.counter}}</span>
+                        </a>
+                    </div>
+                </div>-->
+
+                <!--<div uib-dropdown-menu aria-labelledby="notification-list" class="notification-container animated fadeInDown">
+                    <div class="notification-header">
+                        Notifications
+                    </div>
+                    <div ng-class="notification.config.expand ? 'notification-body-all' : 'notification-body-less'" scroll-glue
+                         z-infinite-scroll="notification.lazyLoadNotifications" inverse="true" time-threshold="5000">
+                        <div ng-repeat="message in notification.messages" ng-show="message.state === 'UNREAD'" class="message-list">
+                            <div class="col-md-12 message-item-container">
+                                <div class="col-md-2 col-sm-2" ng-class="messageItem.enableStatus ? 'message-item-avatar-chat' : 'message-item-avatar-notification'">
+                                    <div ng-class="message.avatar"></div>
+                                </div>
+
+                                <div class="col-md-10 col-sm-10 message-item-message" ng-if="message.actionCode === 'PARTICIPANT_MEMBER_GUEST'">
+                                    <div class="col-md-12 message-item-content">
+                                        <b>{{message.owner}} </b>{{message.value}}
+                                    </div>
+                                    <div class="col-md-12">
+                                        <div class="pull-right">
+                                            <button type="button" class="btn btn-primary" ng-click="notification.addParticipantYes(message)">Yes</button>
+                                            <button type="button" class="btn btn-danger" ng-click="notification.addParticipantNo(message)">No</button>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-12 text message-item-date">
+                                        {{message.date | date:'HH:mm'}}
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+                    <div class="notification-footer">
+                        <a href="#" ng-click="$ctrl.seeAll()">{{notification.textLink}}</a>
+                    </div>
+                </div>-->
+            </div>
+        </div><!-- /.navbar-collapse -->
+    </div><!-- /.container-fluid -->
+
+</nav>
+
+<form class="container" ng-init="chatOpened = false">
+
+    <div class="col-sm-4">
+        <div class="form-inline">
+            <label for="exampleInputName2">Name</label>
+            <input type="text" class="form-control" id="exampleInputName2" placeholder="Jane Doe">
+        </div>
+    </div>
+    <div class="col-sm-8">
+        <div class="indicator" ng-click="chatOpened = true">
+            <a href="javascript:void(0);">
+                <img src="../assets/chat-icon.png" width="35">
+                <span class="indicator-counter">0</span>
+            </a>
+        </div>
+        <div class="row margin-child set-container-box" ng-show="chatOpened === true ">
+            <div class="col-sm-2">
+                <img src="../assets/lucy.png" width="100">
+            </div>
+            <div class="col-sm-10 set-container-box__services" ng-controller='RoomController as chat'>
+
+                <header class="nav-content">
+                    <div class="nav-content">
+                        <div class="col-md-10 corner-left">
+                            <a ui-sref="set-chat-lucy" class="color-icon" >
+                                <i class="fa fa-question-circle fa-lg" aria-hidden="true"></i>
+                            </a>
+                            <a ui-sref="set-share" class="color-icon" >
+                                <i class="fa fa-share-alt fa-lg" aria-hidden="true" ></i>
+                            </a>
+                            <a ui-sref="set-attachment" class="color-icon" >
+                                <i class="fa fa-paperclip fa-lg" aria-hidden="true"></i>
+                            </a>
+                            <a ui-sref="set-document" class="color-icon" >
+                                <i class="fa fa-sticky-note fa-lg" aria-hidden="true"></i>
+                            </a>
+                            <a ui-sref="set-chat" class="color-icon">
+                                <i class="fa fa-comment fa-lg" aria-hidden="true">
+                                    <span class="counter-icon">{{chat.recipientCounter}}</span>
+                                </i>
+                            </a>
+                            <a ui-sref="set-info" class="color-icon">
+                                <i class="fa fa-info-circle fa-lg" aria-hidden="true"></i>
+                            </a>
+                        </div>
+                        <div class="col-md-2 corner-right">
+                            <a href="" class="color-icon color-icon-remove">
+                                <i class="fa fa-times fa-lg" aria-hidden="true"></i>
+                            </a>
+                        </div>
+                    </div>
+
+                    <div class="set-description-bar">
+                        <hr class="set-description-bar__separator"/>
+                        <div class="col-sm-10">
+                            <p class="set-description__text">
+                                <span class="set-description-bar__service-icon">
+                                    <i class="fa fa-comment fa-lg"></i>
+                                </span>
+                                <span class="set-description__text">Social Chat On <b>{{chat.resource.name}}</b></span>
+                            </p>
+                        </div>
+                        <div class="col-sm-1" ng-if="chat.enableConversationOptions">
+                            <button type="button" class="btn btn-default btn-xs"
+                                    ng-show="chat.visitorUser && !chat.isGuestUser"
+                                    ng-click="chat.joinToConversation()">
+                                Join
+                            </button>
+                        </div>
+                        <div class="col-sm-1" ng-if="chat.enableConversationOptions">
+                            <span class="set-description-bar__lock-icon">
+                                <a ng-show="chat.isPublicConversation" ng-click="chat.doPrivateConversation()">
+                                    <i class="fa fa-unlock fa-lg"></i>
+                                </a>
+                                <a ng-show="chat.isPrivateConversation" ng-click="chat.doPublicConversation()">
+                                    <i class="fa fa-lock fa-lg"></i>
+                                </a>
+                            </span>
+                        </div>
+                    </div>
+                </header>
+
+                <div class="row margin-child set-chat__body-container">
+                    <div class="col-md-10 set-chat__messages-container">
+                        <div class="row margin-child">
+                            <div class="content">
+                                <div class="line-bottom">
+                                    <uib-tabset active="0" class="tabs">
+                                        <uib-tab index="$index" ng-repeat="conversation in chat.conversations"
+                                                 ng-click="chat.openConversation(conversation)" class="tab-box">
+                                            <uib-tab-heading>
+                                                {{conversation.label}}
+                                            </uib-tab-heading>
+                                        </uib-tab>
+
+                                        <uib-tab index="chat.conversations.length + 1" class="tab-box">
+                                            <uib-tab-heading>
+                                                <input type="text" ng-model="chat.conversationPanel.label" ng-if="chat.conversationPanel.opened"
+                                                       ng-keypress="chat.createConversation( $event )">
+                                                <i class="fa fa-plus" aria-hidden="true"
+                                                   ng-hide="chat.conversationPanel.opened"
+                                                   ng-click="chat.openConversationPanel()">
+                                                </i>
+                                            </uib-tab-heading>
+                                        </uib-tab>
+                                    </uib-tabset>
+                                </div>
+                            </div>
+                        </div>
+
+                        <messages-list chat-user="chat.chatUser" messages="chat.messagesPanel.messages"></messages-list>
+
+                        <alert msg-src="chat.conversationAlerts"></alert>
+                    </div>
+
+                    <div class="col-md-2 margin-child">
+                        <participants-list chat-user="chat.chatUser"
+                                           conversation="chat.activeConversation"
+                                           participants="chat.participantPanel.participants"
+                                           owner-participant="chat.participantPanel.ownerParticipant"></participants-list>
+
+                        <div class="row margin-child"
+                             ng-if="chat.enableConversationOptions && !chat.isGuestUser && !chat.visitorUser"
+                             ng-click="chat.showParticipantPanel()">
+                            <div class="add-users">
+                                <span class="btn btn-circle">+</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-sm-12 set-chat__footer-container">
+                    <add-participants-panel chat-user="chat.chatUser"
+                                            conversation="chat.activeConversation"
+                                            participants="chat.participantPanel.participants"
+                                            owner-participant="chat.participantPanel.ownerParticipant"></add-participants-panel>
+
+
+                    <div class="chat-textarea-content">
+                        <div class="chat-textarea" ng-class="!chat.chatTextareaEnabled ? 'disabled' : ''">
+                            <div class="col-sm-10">
+                                <textarea id="chatContent" ng-model="chat.msg.text" class="form-control" rows="1"></textarea>
+                            </div>
+                            <div class="col-sm-2 icon-options">
+                                <a href="javascript:void(0);">
+                                    <i class="fa fa-microphone fa-1x" aria-hidden="true"></i>
+                                </a>
+                                <a href="javascript:void(0);" ng-click="chat.sendMessage()">
+                                    <i class="fa fa-paper-plane fa-1x" aria-hidden="true"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+</form>
+
+<a href="#/">Logout</a>
+

@@ -1,0 +1,118 @@
+.msg-container {
+  width: 100%;
+  height: auto;
+}
+.msg-item {
+  display: -webkit-inline-box;
+  padding: 10px 0px 0px 0px;
+  width: 100%;
+}
+.msg-comming-avatar {
+  padding: 0px 0px 0px 20px;
+  width: 20%;
+  text-align: center;
+}
+.msg-comming-content {
+  background-color: #fbe5d5;
+  border-radius: 0px 20px 20px 20px;
+  width: 78%;
+  padding: 0px 0px 0px 0px;
+  height: auto;
+}
+.msg-comming-sender {
+  float: left;
+  padding: 4px 0px 0px 8px;
+}
+.msg-content {
+  clear: both;
+  padding: 0px 20px 20px 9px;
+  height: auto;
+  word-break: break-all;
+}
+.msg-date {
+  font-size: 80%;
+  float: right;
+  margin-top: -20px;
+  padding: 0px 12px 0px 0px;
+}
+.msg-sending-content {
+  background-color: #e2efd9;
+  border-radius: 20px 0px 20px 20px;
+  width: 78%;
+  margin-left: 8px;
+}
+.msg-sending-avatar {
+  padding: 0px 0px 0px 20px;
+  width: 20%;
+  text-align: center;
+}
+.msg-sending-sender {
+  float: right;
+  padding: 4px 27px 0px 8px;
+}
+.text-bold {
+  color: #0f669e;
+  font-weight: bold;
+}
+.avatar {
+  display: block;
+  max-width: 40px;
+  max-height: 40px;
+  width: auto;
+  height: auto;
+  border-radius: 25px 25px;
+}
+.read {
+  color: #4aaf4e;
+}
+.unread {
+  color: #a2a3a3;
+}
+.private-message {
+  border: 1px solid #5d94c6;
+  background-color: #deebf6;
+}
+.message-lock-icon {
+  color: #5d94c6;
+  text-align: right;
+  padding-top: 4px;
+  padding-right: 7px;
+}
+.msg-edited {
+  font-size: 80%;
+  float: right;
+  margin-top: -20px;
+  padding: 0px 12px 0px 0px;
+}
+.msg-removed {
+  float: right;
+  margin-top: -40px;
+  padding: 0px 12px 0px 0px;
+}
+.msg-removed-text {
+  color: #5c5d61;
+  font-size: 90%;
+}
+.indicator-content {
+  font-size: 150%;
+  margin: 0;
+  padding: 0;
+}
+.indicator-container {
+  margin: 0;
+  width: 100%;
+  text-align: center;
+  /*padding: 0px 25px 0px 0px;*/
+}
+.msg-sending-options {
+  margin: 0px;
+  padding: 0px 0px 0px 25px;
+}
+.msg-coming-options {
+  margin: 0px;
+  padding: 0px 0px 0px 100px;
+}
+.msg-user-highlighted {
+  color: #ff851b;
+  font-weight: bold;
+}

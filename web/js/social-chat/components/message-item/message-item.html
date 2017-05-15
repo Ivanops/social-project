@@ -1,0 +1,53 @@
+<div ng-if="$ctrl.instance.answer" class="col-md-12 message-item-container">
+    <div class="col-md-2 col-sm-2">
+        <user-icon instance="$ctrl.instance.user" show-name="true" show-tooltip="false"></user-icon>
+    </div>
+
+    <div class="col-md-10 col-sm-10 message-item-message message-item-message-answer">
+        <div class="col-md-12 message-item-owner">
+            <span>{{$ctrl.instance.user.name}}</span>
+        </div>
+
+        <div class="col-md-12 message-item-content">
+            <span ng-if="$ctrl.instance.contentType === 'TEXT'"
+                  class="chat-message-text">{{$ctrl.instance.content}}</span>
+        </div>
+
+        <div class="col-md-12 text message-item-date">
+            <span>{{$ctrl.instance.createdDate | date:'h:mma'}}</span>
+        </div>
+    </div>
+</div>
+
+<div ng-if="!$ctrl.instance.answer" class="col-md-12 message-item-container">
+    <div class="col-md-10 col-sm-10 message-item-message message-item-message-comment">
+        <div class="col-md-12 message-item-owner">
+            <span class="pull-right">{{$ctrl.instance.user.name}}</span>
+        </div>
+
+        <div class="col-md-12 message-item-content">
+            <span ng-if="$ctrl.instance.contentType === 'TEXT'"
+                  class="chat-message-text pull-right">{{$ctrl.instance.content}}</span>
+        </div>
+
+        <div class="col-md-12 text message-item-date">
+            <span class="pull-left">{{$ctrl.instance.createdDate | date:'h:mma'}}</span>
+        </div>
+    </div>
+
+    <div class="col-md-2 col-sm-2 ">
+        <div>
+            <user-icon instance="$ctrl.instance.user" show-tooltip="false"></user-icon>
+        </div>
+
+        <div class="indicator-container">
+            <div class="indicator-content" ng-if="$ctrl.instance.viewedAll">
+                <i class="fa fa-check-circle read" aria-hidden="true"></i>
+            </div>
+
+            <div class="indicator-content" ng-if="!$ctrl.instance.viewedAll">
+                <i class="fa fa-check-circle-o unread" aria-hidden="true"></i>
+            </div>
+        </div>
+    </div>
+</div>

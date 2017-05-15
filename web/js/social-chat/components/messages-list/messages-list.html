@@ -1,0 +1,14 @@
+<div class="chat-infinite-scroll"
+     z-infinite-scroll="$ctrl.loadPrevious"
+     inverse="true"
+     time-threshold="1000"
+     scroll-threshold="150">
+
+    <div class="msg-container">
+        <div class="message-list my-div"
+             ng-repeat="message in $ctrl.messages"
+             on-render="$ctrl.loadRecipient(message)">
+            <message-item chat-user="$ctrl.chatUser" instance="message"></message-item>
+        </div>
+    </div>
+</div>

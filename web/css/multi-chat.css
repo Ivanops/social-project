@@ -1,0 +1,118 @@
+.tabrow {
+  text-align: center;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  line-height: 24px;
+}
+.space-tabs,
+.tabrow li {
+  margin: 2px 2px 2px 2px;
+  padding: 2px 8px 2px 8px;
+}
+.tabrow li {
+  border: 1px solid #fff;
+  background: #ececec;
+  display: inline-block;
+  font-size: 110%;
+}
+.tabrow {
+  position: relative;
+  width: 95%;
+  display: flex;
+}
+.tabrow:after {
+  position: absolute;
+  content: "";
+  width: 100%;
+  bottom: 0;
+  left: 0;
+  border-bottom: 1px solid #87b2ce;
+  z-index: 1;
+}
+.tabrow li {
+  position: relative;
+}
+.tabrow li:hover {
+  z-index: 2;
+  border-bottom-color: #000;
+  background: #fff;
+  color: #000;
+  cursor: pointer;
+}
+.tabrow li.active {
+  z-index: 2;
+  background: #bfbfbf;
+  cursor: pointer;
+  font-weight: bold;
+  border-bottom: 4px solid #074d72;
+  border-radius: 10px 10px 0 0;
+
+}
+.direction {
+  margin: 0;
+  padding: 0;
+  border: 1px solid #aaa;
+  background: #ececec;
+  width: 5%;
+  text-align: center;
+  font-size: 124%;
+}
+.right {
+  float: right;
+}
+.left {
+  float: left;
+}
+.content {
+  height: 60px;
+}
+div.direction:hover {
+  background: #bfbfbf;
+  cursor: pointer;
+}
+.icons-tabs {
+  font-size: 90% !important;
+}
+
+.tabs {
+  height:30px;
+  padding: 0 0 0 0;
+  overflow:visible;
+  z-index: 100;
+}
+.tab-box {
+  height: 30px;
+  border-radius: 4px;
+  border: 1px solid #ccc;
+  margin: 0 10px 0;
+  box-shadow: 1px 1px 2px black, 0 2px #00caff, 0 5px #d9ffec;
+  -webkit-transform: perspective(100px) rotateX(20deg);
+  -moz-transform: perspective(100px) rotateX(20deg);
+}
+.nav-tabs {
+  height: 54px;
+}
+.nav-tabs > li.active > a {
+  background-color: #acacac;
+  color: #000000;
+  cursor: pointer;
+}
+.nav-tabs > li.active > a:focus {
+  background-color: #acacac;
+  color: #000000;
+  cursor: pointer;
+}
+.nav-tabs > li > a {
+  margin-right: 0;
+}
+.nav > li > a {
+  position: relative;
+  display: block;
+  padding: 5px 15px;
+}
+.line-bottom {
+  border-bottom: 1px solid;
+  height: 30px;
+  width: 100%;
+}

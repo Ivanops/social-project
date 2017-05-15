@@ -1,0 +1,16 @@
+.set-footer-notification__message {
+  padding-top: 10px;
+  padding-bottom: 10px;
+  background-color: #696c75;
+  color: #fff;
+  position: absolute;
+  bottom: 0;
+}
+.set-footer-notification__message a {
+  color: #ff0;
+}
+.set-footer-notification__message a:hover {
+  text-decoration: none;
+  color: #db5500;
+  cursor: pointer;
+}

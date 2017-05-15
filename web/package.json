@@ -1,0 +1,32 @@
+{
+  "name": "web",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "angular": "^1.5.x",
+    "angular-animate": "^1.5.*",
+    "angular-moment": "^1.0.1",
+    "angular-resource": "^1.6.4",
+    "angular-route": "^1.6.4",
+    "angular-ui-bootstrap": "^2.5.0",
+    "angular-ui-router": "^1.0.0-rc.1",
+    "bootstrap": "^3.3.7",
+    "font-awesome": "^4.7.0",
+    "moment": "^2.18.1",
+    "ngstorage": "^0.3.11",
+    "sockjs-client": "^1.1.2",
+    "stompjs": "^2.3.3",
+    "zinfinitescroll": "^1.1.6"
+  },
+  "devDependencies": {
+    "gulp": "^3.9.1",
+    "gulp-server-livereload": "^1.9.2",
+    "gulp-order": "^1.1.1"
+  }
+}

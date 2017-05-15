@@ -1,0 +1,76 @@
+.set-circle {
+  width: 20px !important;
+  height: 20px !important;
+  border-radius: 50%;
+  font-size: 90%;
+  color: #fff;
+  line-height: 12px !important;
+  text-align: center;
+  background: #263238;
+  font-weight: bold;
+}
+div.child-circle:hover {
+  color: #d96112;
+  width: 21px;
+  height: 21px;
+  font-size: 80%;
+}
+div.circle:hover {
+  cursor: pointer;
+}
+.child-circle {
+  width: 17px;
+  height: 17px;
+  border-radius: 50%;
+  color: #fff;
+  line-height: 18px;
+  text-align: center;
+  background: #263238;
+  font-weight: bold;
+  font-size: 65%;
+}
+#icon-reply {
+  -ms-transform: translate(2px, -42px) /* IE 9 */;
+  -webkit-transform: translate(2px, -42px) /* Safari */;
+  transform: translate(2px, -42px);
+  position: absolute;
+}
+#icon-share {
+  -ms-transform: translate(19px, -36px) /* IE 9 */;
+  -webkit-transform: translate(19px, -36px) /* Safari */;
+  transform: translate(19px, -36px);
+  position: absolute;
+}
+#icon-star {
+  -ms-transform: translate(25px, -19px) /* IE 9 */;
+  -webkit-transform: translate(25px, -19px) /* Safari */;
+  transform: translate(25px, -19px);
+  position: absolute;
+}
+#icon-pencil {
+  -ms-transform: translate(18px, -1px) /* IE 9 */;
+  -webkit-transform: translate(18px, -1px) /* Safari */;
+  transform: translate(18px, -1px);
+  position: absolute;
+}
+#icon-trash {
+  -ms-transform: translate(1px, 3px) /* IE 9 */;
+  -webkit-transform: translate(1px, 3px) /* Safari */;
+  transform: translate(1px, 3px);
+  position: absolute;
+}
+.child-circle:hover {
+  cursor: pointer;
+}
+.container-show-hide {
+  position: relative;
+  transition: all ease-in-out 0.5s;
+}
+.container-show-hide.ng-hide {
+  opacity: 0;
+}
+.left-icons-action {
+  float: left;
+  padding: 6px 9px 0px 0px;
+  margin: 0;
+}

@@ -1,0 +1,8 @@
+.scroll-style {
+  max-height: 150px;
+  overflow-y: scroll;
+}
+.message-list {
+  padding: 0;
+  margin: 0;
+}

@@ -1,0 +1,19 @@
+.notify-container {
+  width: 100%;
+}
+.notify-text {
+  text-align: center;
+  font-size: 95%;
+}
+.notify-color-text {
+  font-weight: bold;
+}
+.clear {
+  clear: both;
+}
+.notify-date {
+  float: right;
+  color: #0f669e;
+  padding: 0px 100px 0px 0px;
+  font-size: 80%;
+}

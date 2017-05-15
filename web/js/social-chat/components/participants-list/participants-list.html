@@ -1,0 +1,23 @@
+<div class="row users-container" ng-if="$ctrl.show">
+    <div class="row margin-child" ng-class="!$ctrl.enabled ? 'disabled' : ''">
+        <div class="contacts-item-owner">
+            <user-icon instance="$ctrl.ownerParticipant.data"
+                       show-state="true"
+                       show-tooltip="$ctrl.enabled"
+                       show-name="true"></user-icon>
+        </div>
+
+        <div class="contacts-item-default"
+             ng-repeat="participant in $ctrl.participants"
+             ng-class="participant.type === 'GUEST' ? 'disabled' : ''">
+            <user-icon instance="participant.data"
+                       show-state="true"
+                       show-tooltip="$ctrl.enabled"
+                       show-name="true"></user-icon>
+
+            <div class="user-status-delet-user" ng-if="$ctrl.isOwnerUser">
+                <i class="fa fa-minus" aria-hidden="true"></i>
+            </div>
+        </div>
+    </div>
+</div>

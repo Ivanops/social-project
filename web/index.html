@@ -1,0 +1,126 @@
+<!doctype html>
+<html ng-app="socialChat">
+<head>
+    <title>SET Forms</title>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+
+    <!-- Bootstrap -->
+    <!-- Latest compiled and minified CSS -->
+
+    <link rel="stylesheet" href="./node_modules/bootstrap/dist/css/bootstrap.min.css">
+
+    <link rel="stylesheet" href="./node_modules/bootstrap/dist/css/bootstrap-theme.min.css">
+    <link rel="stylesheet" href="./node_modules/angular-ui-bootstrap/dist/ui-bootstrap-csp.css">
+
+    <link rel="stylesheet" href="./node_modules/font-awesome/css/font-awesome.min.css">
+    <!-- styles -->
+    <link rel="stylesheet" href="css/old/chat.css">
+    <link rel="stylesheet" href="css/chat.css">
+    <link rel="stylesheet" href="css/container.css">
+    <link rel="stylesheet" href="css/navigator.css">
+    <link rel="stylesheet" href="css/chat-message.css">
+    <link rel="stylesheet" href="css/contact-list.css">
+    <link rel="stylesheet" href="css/description-bar.css">
+    <link rel="stylesheet" href="css/divider.css">
+    <link rel="stylesheet" href="css/footer-notification.css">
+    <link rel="stylesheet" href="css/icons.css">
+    <link rel="stylesheet" href="css/indicator.css">
+    <link rel="stylesheet" href="css/message-item.css">
+    <link rel="stylesheet" href="css/message-list.css">
+    <link rel="stylesheet" href="css/multi-chat.css">
+    <link rel="stylesheet" href="css/notify-participant.css">
+    <link rel="stylesheet" href="css/participants.css">
+    <link rel="stylesheet" href="css/reply-reference.css">
+    <link rel="stylesheet" href="css/text-area.style.css">
+    <link rel="stylesheet" href="css/user-item-sections.css">
+    <link rel="stylesheet" href="css/user-item.css">
+    <link rel="stylesheet" href="css/user-items-panel.css">
+    <link rel="stylesheet" href="css/notification.css">
+    <!-- Scripts -->
+    <script src="./node_modules/angular/angular.min.js"></script>
+    <script src="./node_modules/angular-resource/angular-resource.min.js"></script>
+    <script src="./node_modules/angular-route/angular-route.min.js"></script>
+    <script src="./node_modules/angular-animate/angular-animate.js"></script>
+    <script src="./node_modules/angular-ui-bootstrap/dist/ui-bootstrap.js"></script>
+    <script src="./node_modules/angular-ui-bootstrap/dist/ui-bootstrap-tpls.js"></script>
+    <script src="./node_modules/sockjs-client/dist/sockjs.min.js"></script>
+    <script src="./node_modules/stompjs/lib/stomp.min.js"></script>
+    <script src="./node_modules/ngstorage/ngStorage.min.js"></script>
+    <script src="./node_modules/zinfinitescroll/zInfiniteScroll.js"></script>
+
+
+
+    <script src="js/app.js"></script>
+    <script src="js/loginController.js"></script>
+
+    <link rel="stylesheet" href="js/user-provider/user-icon/user-icon.css">
+    <script src="js/user-provider/user-provider.constants.js"></script>
+    <script src="js/user-provider/user-provider.registry.js"></script>
+    <script src="js/user-provider/user-provider.service.js"></script>
+    <script src="js/user-provider/user-icon/user-icon.component.js"></script>
+    <script src="js/user-provider/user-icon/user-icon.controller.js"></script>
+
+
+
+
+
+
+    <script src="js/alert/alert.component.js"></script>
+    <script src="js/alert/alert.controller.js"></script>
+    <script src="js/alert/alert.service.js"></script>
+
+
+    <script src="js/social-chat/directives/chat.directives.js"></script>
+
+    <script src="js/social-chat/components/add-participants-panel/add-participants-panel.component.js"></script>
+    <script src="js/social-chat/components/add-participants-panel/add-participants-panel.controller.js"></script>
+    <script src="js/social-chat/components/add-participants-panel/add-participants-panel.manager.js"></script>
+
+    <script src="js/social-chat/components/chat-panel/conversations.js"></script>
+    <script src="js/social-chat/components/chat-panel/conversation.js"></script>
+
+    <script src="js/social-chat/components/message-item/message-item.component.js"></script>
+    <script src="js/social-chat/components/message-item/message-item.controller.js"></script>
+
+    <script src="js/social-chat/components/messages-list/messages-list.component.js"></script>
+    <script src="js/social-chat/components/messages-list/messages-list.controller.js"></script>
+    <script src="js/social-chat/components/messages-list/messages-list.manager.js"></script>
+
+    <script src="js/social-chat/components/participants-list/participants-list.component.js"></script>
+    <script src="js/social-chat/components/participants-list/participants-list.controller.js"></script>
+    <script src="js/social-chat/components/participants-list/participants-list.manager.js"></script>
+
+    <script src="js/social-chat/services/room.service.js"></script>
+    <script src="js/social-chat/services/participants.service.js"></script>
+    <script src="js/social-chat/services/chat.services.js"></script>
+    <script src="js/social-chat/services/message.service.js"></script>
+
+    <script src="js/social-chat/ws/ws.js"></script>
+    <script src="js/social-chat/ws/room.listener.js"></script>
+    <script src="js/social-chat/ws/user.listener.js"></script>
+    <script src="js/social-chat/ws/conversation.listener.js"></script>
+
+    <script src="js/social-chat/main/room.js"></script>
+    <script src="js/social-chat/main/room.manager.js"></script>
+    <script src="js/social-chat/main/room.controller.js"></script>
+
+    <script src="js/social-chat/social-chat.constants.js"></script>
+    <script src="js/social-chat/chat.constants.js"></script>
+
+
+    <script src="js/notification/notification.service.js"></script>
+    <script src="js/notification/notification.controller.js"></script>
+
+    <style>
+        html, body, input, select
+    </style>
+
+</head>
+<body>
+<div class="container-fluid" ng-view></div>
+</body>
+</html>

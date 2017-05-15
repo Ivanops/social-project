@@ -1,0 +1,18 @@
+<div ng-controller='HomeController as home'>
+    <h2>Home {{User.name}}</h2>    
+
+    <form name="openChatForm" ng-submit="home.openChat()" class="form-horizontal">
+        <div class="form-group">
+            <label for="resourceId" class="col-sm-2 control-label">Resource</label>
+            <div class="col-sm-10">
+                <input type="text" id="resourceId" ng-model="home.resourceId" size="20" placeholder="Type your resource ID e.g. 001" class="form-control">
+            </div>
+        </div>
+        <div class="form-group">
+            <div class="col-sm-offset-2 col-sm-10">
+                <button type="submit" class="btn btn-default">Open Chat</button>                
+            </div>                        
+        </div>
+    </form>
+
+</div>

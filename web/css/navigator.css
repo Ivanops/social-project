@@ -1,0 +1,51 @@
+.nav-content div {
+  background-color: #074d72;
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+.nav-header {
+  font-size: 16px;
+  min-height: 50px;
+  border-bottom: 1px solid #eee;
+  background-color: #0f669e;
+}
+.corner-right {
+  border-top-right-radius: 15px;
+  -moz-border-radius-topright: 15px;
+  -webkit-border-top-right-radius: 15px;
+  text-align: right;
+}
+.corner-left {
+  -webkit-border-top-left-radius: 15px;
+  -moz-border-radius-topleft: 15px;
+  border-top-left-radius: 15px;
+}
+.color-icon {
+  color: #fff;
+  padding: 0px 6px 0px 6px;
+}
+.color-icon:hover {
+  text-decoration: none;
+  color: #db5500;
+  cursor: pointer;
+}
+.color-icon-remove {
+  padding-left: 34px;
+}
+.set-badge__counter {
+  position: absolute;
+  left: 154px;
+  top: 4px;
+}
+.counter-icon {
+  cursor: pointer;
+  text-decoration: none;
+  background: #b94a48;
+  border-radius: 50%;
+  color: #fff;
+  font-size: 12px;
+  position: relative;
+  padding: 1px 4px 1px 4px;
+  top: -10px;
+  left: -10px;
+}

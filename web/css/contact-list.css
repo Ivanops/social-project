@@ -1,0 +1,52 @@
+.set-contact-list__container {
+  min-height: 200px;
+  border-bottom: 1px solid #87b2ce;
+  padding-left: 50px;
+  padding-right: 50px;
+  padding-top: 10px !important;
+  padding-bottom: 10px !important;
+  background-color: #dae0e4;
+  display: inline-block;
+}
+.set-contact-list__contact-item {
+  margin: 7px;
+  display: block;
+  box-sizing: border-box;
+  text-decoration: none;
+  border-radius: 10px;
+  background-color: #a1bfc6;
+  padding-right: 2px;
+  padding-left: 1px;
+}
+.set-contact-list__contact-item .close {
+  float: right;
+  display: inline-block;
+  padding: 0 2px;
+  font-size: 12px;
+}
+.set-contact-list__contact-item .close:hover {
+  color: #db5500;
+  cursor: pointer;
+}
+.set-contact-list__contact-item .text {
+  height: 100%;
+  display: flex;
+  text-align: center;
+}
+.set-contact-list__input {
+  padding: 0;
+  margin-top: 7px;
+}
+.set-contact-list__input input {
+  width: 100% !important;
+}
+.set-contact-list__group {
+  border: 1px solid #87b2ce;
+  padding: 10px 0 10px 0;
+  margin-top: 7px;
+  background-color: #ffffff;
+}
+.set-contact-list__group-button {
+  padding-top: 10px;
+}
+

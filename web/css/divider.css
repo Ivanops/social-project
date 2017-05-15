@@ -1,0 +1,16 @@
+.direct-chat-messages {
+  overflow: auto;
+  padding: 10px;
+  transform: translate(0px, 0px);
+}
+.chat-box-single-line {
+  border-bottom: 1px solid #d8e5ef;
+  height: 3px;
+  margin: 7px 0 20px;
+}
+p.timestamp {
+  color: #137cba;
+  text-align: center;
+  position: relative;
+  font-size: x-small;
+}

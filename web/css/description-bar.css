@@ -1,0 +1,26 @@
+.set-description-bar {
+  background-color: #074d72;
+  min-height: 105px;
+  color: #fff;
+}
+.set-description-bar__service-icon {
+  color: #db5500;
+}
+.set-description-bar__service-name {
+  font-weight: bold;
+  padding-left: 12px;
+}
+.set-description-bar__separator {
+  color: #fff;
+}
+.set-description__text {
+  font-size: 16px;
+}
+.set-description-bar__lock-icon a {
+  color: #fff;
+}
+.set-description-bar__lock-icon a:hover {
+  text-decoration: none;
+  color: #db5500;
+  cursor: pointer;
+}

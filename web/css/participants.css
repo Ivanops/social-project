@@ -1,0 +1,65 @@
+.my-modal-content {
+  background-color: #f2f2f2;
+  margin: 0;
+  padding: 0;
+  border-top: 1px solid #87b2ce;
+}
+.my-modal-sm {
+  width: 435px !important;
+}
+.my-modal-font {
+  font-weight: normal;
+  color: #0f669e;
+}
+.my-modal-input {
+  width: 100%;
+  border-radius: 5px;
+  border: 1px solid #0f669e;
+}
+.my-modal-tags {
+  width: 100%;
+  height: auto;
+  border: 1px solid #0f669e;
+  margin: 10px 0px 0px 0px;
+  border-radius: 5px;
+  padding: 0;
+  background-color: #fff;
+  overflow-y: auto;
+  overflow-x: hidden;
+}
+.my-tags-content {
+  padding: 0;
+  margin: 0;
+  height: auto;
+  float: left;
+  padding: 3px;
+}
+.tag-item {
+  margin: 0;
+  padding: 1px 0px 0px 0px;
+  border-radius: 5px;
+  background-color: #f2f2f2;
+  width: auto;
+  height: auto;
+  color: #0f669e;
+}
+i.fa-times:hover,
+i.fa-share-alt:hover,
+i.fa-paper-plane:hover {
+  cursor: pointer;
+}
+.action-buttons {
+  margin-top: 21px;
+  margin-bottom: 8px;
+  padding: 10px 0px 0px 278px;
+}
+.action-buttons button {
+  width: 90px;
+}
+.set-participant-container {
+  background-color: #fff;
+  margin: 15px 0px 0px 0px;
+  padding: 83px 0px 0px 0px;
+  border-bottom-left-radius: 25px;
+  border-bottom-right-radius: 25px;
+}

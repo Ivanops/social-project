@@ -1,0 +1,33 @@
+.mainbody,
+.nav-header,
+.footer {
+  padding: 0px;
+}
+.margin-child {
+  margin-left: 0px;
+  margin-right: 0px;
+}
+.set-container-box {
+  min-width: 660px;
+  max-width: 700px;
+  position: absolute;
+  left: -60px;
+}
+.set-container-box__services {
+  background-color: #fff;
+  padding-left: 0px;
+  padding-right: 0px;
+  min-width: 500px;
+  min-height: 350px;
+  border: 1px solid #87b2ce;
+  border-radius: 17px;
+  -moz-border-radius: 17px;
+  -webkit-border-radius: 17px;
+  overflow:hidden;
+}
+.animate-enter,
+.animate-leave {
+  transition: 500ms ease-in all;
+  position: relative;
+  display: block;
+}

@@ -1,0 +1,194 @@
+/*GLOBAL ELEMENTS*/
+textarea {
+    resize: none
+}
+
+.container {
+    width: 970px !important;
+}
+
+.navbar h1 {
+    margin-top: 15px;
+    font-size: 22px;
+    float: left;
+    color: #fff;
+}
+
+.chat-box {
+    height: 400px;
+    overflow: auto;
+}
+
+.remove-option {
+    font-size: 10px;
+}
+
+.msg-removed {
+    font-size: 12px;
+    color: #7f8c8d;
+}
+
+.participant-options {
+    font-size: 10px;
+}
+
+/* HEADER CONTAINER */
+.chat-header-container {
+    background: #074d72;
+}
+
+.chat-header-container a {
+    color: #ffffff;
+}
+
+.chat-header-container a:hover {
+    color: #db5500;
+}
+
+.chat-header-option {
+    margin: 0 10px;
+}
+
+.chat-header-options-container {
+    padding: 10px 15px;
+}
+
+.chat-header-text {
+    color: #ffffff;
+    font-weight: bold;
+    padding: 10px;
+}
+
+a.orange {
+    color: #db5500;
+}
+
+/* */
+.chat-tab-container {
+    height: 25px;
+}
+
+.chat-tab-container li a {
+    color: #000;
+    padding: 2px 15px;
+}
+
+.chat-status-online {
+    color: green;
+    transform: translate(-18px, 15px);
+}
+
+.chat-status-offline {
+    background: #c1c1c1;
+    border-radius: 30px;
+    color: #000;
+    transform: translate(-18px, 15px);
+}
+
+.nav-tabs {
+    overflow-x: auto;
+    overflow-y: hidden;
+    display: -webkit-box;
+    display: -moz-box;
+}
+
+.chat-tabs-tab {
+    background: #bfbfbf;
+    color: #000;
+    /*border: solid 1px;*/
+    font-weight: bold;
+}
+
+/* Participants */
+.chat-participants-list {
+    list-style: none;
+    padding: 5px;
+}
+
+.participants-img {
+    border-radius: 50px;
+    background: #d8d8d8;
+}
+
+.chat-button-next, .chat-button-back {
+    /*border: solid 2px;*/
+    background: #bfbfbf;
+    border-style: solid;
+}
+
+.chat-send-btn {
+    background: aliceblue;
+    border: none;
+    color: #074d72;
+    padding: 0 10px;
+}
+
+.chat-message-element {
+    border: none;
+}
+
+.chat-message-content-answer {
+    padding: 20px 20px;
+    background: #fbe5d5;
+    text-align: left;
+    border-radius: 15px 15px 15px 0px;
+}
+
+.chat-message-content {
+    padding: 20px 20px;
+    background: #e2efd9;
+    text-align: right;
+    border-radius: 15px 15px 0px 15px;
+}
+
+.chat-container {
+    border: solid 1px #bbbbbb;
+}
+
+.read {
+    color: #4aaf4e;
+}
+
+.unread {
+    color: #a2a3a3;
+}
+
+.indicator-content {
+    font-size: 150%;
+    margin: 0;
+    padding: 0;
+}
+
+.message-container {
+    height: 499px;
+    overflow: scroll;
+}
+
+.indicator-container {
+    margin: 0;
+    width: 100%;
+    text-align: center;
+    /*padding: 0px 25px 0px 0px;*/
+}
+
+/* The starting CSS styles for the enter animation */
+.my-div.ng-enter {
+    transition: 0.5s linear all;
+    opacity: 0;
+}
+
+/* The finishing CSS styles for the enter animation */
+.my-div.ng-enter.ng-enter-active {
+    opacity: 1;
+}
+
+/* now the element will fade out before it is removed from the DOM */
+.my-div.ng-leave {
+    transition: 0.5s linear all;
+    opacity: 1;
+}
+
+.my-div.ng-leave.ng-leave-active {
+    opacity: 0;
+}
+

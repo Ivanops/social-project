@@ -1,0 +1,30 @@
+.user-icon img {
+    border-radius: 50%;
+    max-width: 45px;
+    max-height: 45px;
+}
+
+.user-icon-online {
+    border: 3px solid #92d050;
+    border-radius: 25px 25px;
+}
+
+.user-icon-offline {
+    border: 3px solid #b94a48;
+    border-radius: 25px 25px;
+}
+
+.user-icon-single {
+    border: 3px solid #074d72;
+    border-radius: 25px 25px;
+}
+
+.user-icon-name {
+    padding: 0;
+    margin: 1px;
+    color: #074d72;
+    font-weight: bold;
+    font-size: 9px;
+    word-wrap: break-word;
+    text-align: center;
+}

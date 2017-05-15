@@ -1,0 +1,23 @@
+<div class="user-icon">
+    <div ng-if="!$ctrl.showState">
+        <img class="user-icon-single"
+             ng-src="assets/user.png"
+             tooltip-placement="left"
+             uib-tooltip="{{$ctrl.instance.name}}"
+             tooltip-enable="$ctrl.showTooltip">
+    </div>
+
+    <div ng-if="$ctrl.showState">
+        <img ng-src="assets/user.png"
+             ng-class="$ctrl.instance.status === 'ONLINE' ? 'user-icon-online' : 'user-icon-offline'"
+             tooltip-placement="left"
+             uib-tooltip="{{$ctrl.instance.name}}"
+             tooltip-enable="$ctrl.showTooltip">
+    </div>
+
+    <div ng-if="$ctrl.showName" class="user-icon-name">
+        <span>{{$ctrl.instance.name}}</span>
+    </div>
+</div>
+
+

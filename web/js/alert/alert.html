@@ -1,0 +1,17 @@
+<div class="col-md-12 set-footer-notification__message my-div" ng-repeat="element in $ctrl.msgSrc">
+
+    <div class="col-md-12" ng-if="element.type === 'yes_no'">
+        <div class="pull-left">{{element.msg}}</div>
+        <div class="pull-right">
+            <a href="javascript:void(0);" ng-click="$ctrl.doYes(element)">Yes</a>
+            <a href="javascript:void(0);" ng-click="$ctrl.doNo(element)">No</a>
+        </div>
+    </div>
+
+    <div class="col-md-12" ng-if="element.type === 'info'">
+        <div class="pull-left">{{element.msg}}</div>
+        <div class="pull-right">
+            <a href="javascript:void(0);" ng-click="$ctrl.doOk(element)">Ok</a>
+        </div>
+    </div>
+</div>

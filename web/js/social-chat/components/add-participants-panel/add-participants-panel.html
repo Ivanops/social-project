@@ -1,0 +1,66 @@
+<div class="row margin-child">
+    <div class="set-contact-list__container" ng-if="$ctrl.state === 'EXPANDED'">
+        <div class="col-sm-12">
+            <span>Enter the email/username of the user that you want to add.</span>
+        </div>
+
+        <div class="col-sm-12 set-contact-list__input">
+            <div class="input-group">
+                <input id="usernameOrEmail"
+                       type="text"
+                       class="form-control"
+                       placeholder="username/email"
+                       ng-model="$ctrl.searchForm.item"
+                       uib-typeahead="contact as contact.email for contact in $ctrl.searchUser($viewValue)"
+                       typeahead-loading="$ctrl.searchForm.isLoading"
+                       typeahead-no-results="$ctrl.searchForm.hasNoResults"
+                       typeahead-on-select="$ctrl.onSelect($item)">
+
+                <span class="input-group-btn">
+                    <button class="btn btn-secondary"
+                            type="button"
+                            ng-click="$ctrl.addUser()"
+                            ng-disabled="!$ctrl.searchForm.hasSelection">
+                        Ok
+                    </button>
+                </span>
+            </div>
+
+            <i ng-show="$ctrl.searchForm.isLoading" class="fa fa-refresh fa-spin"></i>
+
+            <div ng-show="$ctrl.searchForm.hasNoResults">
+                <i class="fa fa-times"></i>
+                <span>No Results Found</span>
+            </div>
+        </div>
+
+        <div class="col-sm-12 set-contact-list__group">
+            <div class="col-sm-2 set-contact-list__contact-item"
+                 ng-repeat="usr in $ctrl.contactsForm.users">
+                <span class="close" ng-click="$ctrl.removeUser($index)">
+                    <i class="fa fa-close" aria-hidden="true"></i>
+                </span>
+
+                <div class="text" uib-tooltip="{{usr.email}}">
+                    <span>{{usr.name}}</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="clear"></div>
+
+        <div class="col-sm-12 set-contact-list__group-button">
+            <div class="pull-right">
+                <button type="button" class="btn btn-danger"
+                        ng-click="$ctrl.cancel()">
+                    Cancel
+                </button>
+                <button type="button" class="btn btn-primary"
+                        ng-click="$ctrl.invite()"
+                        ng-disabled="!$ctrl.contactsForm.users.length">
+                    Add
+                </button>
+            </div>
+        </div>
+    </div>
+</div>
