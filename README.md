@@ -67,3 +67,5 @@ that was written before SCE was introduced and you're migrating them a module at
 Also do note that this is an app-wide setting, so if you are writing a library,
 you will cause security bugs applications using it.
 __test__
+*hola*
+`another`
